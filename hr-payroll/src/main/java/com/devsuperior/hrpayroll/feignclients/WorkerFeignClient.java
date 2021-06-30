@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Component
 @FeignClient(
         name = "hr-worker",
-        url = "localhost:8081",
         path = "/workers")
 public interface WorkerFeignClient {
 
