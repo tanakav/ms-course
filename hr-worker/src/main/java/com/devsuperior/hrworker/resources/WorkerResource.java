@@ -37,6 +37,12 @@ public class WorkerResource {
     public ResponseEntity<Employee> getById(@PathVariable Long id){
         logger.info("PORT = "+env.getProperty("local.server.port"));
 
+//        try {
+//            Thread.sleep(3000L);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+
         Employee worker = employeeRepository.findById(id).get();
         return ResponseEntity.ok().body(worker);
     }
